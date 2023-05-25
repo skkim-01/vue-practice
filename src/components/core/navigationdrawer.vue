@@ -1,26 +1,39 @@
 <template>
     <v-navigation-drawer
-        v-model="drawer"
+        width="200"
+        v-model= "drawer"
         :rail="rail"
-        location="left"
-        fixed app
-    >
-        <v-toolbar flat dark class="toolbar">
-        </v-toolbar>
-<!--         
-        <v-list-item nav>
+        permanent
+    >        
+        <!-- <v-list-item>
             <template v-slot:append>
                 <v-btn
+                    position="relative"
                     variant="text"
                     icon
                     @click.stop="rail=!rail"
                 >
-                    <v-icon>{{ rail ? "mdi-chevron-right" : "mdi-chevron-left" }}</v-icon>
+                    <v-icon>
+                        {{ rail ? "mdi-chevron-right" : "mdi-chevron-left" }}
+                    </v-icon>
                 </v-btn>
             </template>
         </v-list-item> -->
 
         <v-list>
+            <v-list-item>
+                <v-btn
+                    variant="text"
+                    icon
+                    @click.stop="rail=!rail"
+                >
+                    <v-icon>
+                        {{ rail ? "mdi-chevron-right" : "mdi-chevron-left" }}
+                    </v-icon>
+                </v-btn>
+            </v-list-item>
+            <v-divider />
+
             <v-list-item
                 v-for="(item, i) in items"
                 :key="i"

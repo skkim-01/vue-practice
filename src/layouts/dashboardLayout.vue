@@ -1,15 +1,13 @@
 <template>
-  <v-app id="inspire">
-    <div class="app-container">
-      <toolbar @toggleNavigationBar="drawer=!drawer; console.log(drawer)"/>
-      <navigation :rail="drawer"/>
-      <v-content>
-          <router-view> </router-view>
-          <page-footer />
-        <!-- <page-footer /> -->
-      </v-content>
-      
-    </div>
+  <v-app>
+      <toolbar app primary fixed />
+      <navigation app dark fixed />
+      <v-main>
+        <v-container>
+          <slot />
+        </v-container>
+        <page-footer />
+      </v-main>
   </v-app>
 </template>
 

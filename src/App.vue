@@ -1,13 +1,14 @@
 <template>
   <div id="app">
-    <appLayout />
+    <appLayout>
+      <router-view></router-view>
+    </appLayout>
   </div>
 </template>
 
-<script setup>
-import appLayout from './layouts/appLayout.vue';
-
+<script>
 </script>
+
 
 <style lang="scss">
 #app {
@@ -16,16 +17,6 @@ import appLayout from './layouts/appLayout.vue';
   font-weight: 400;
   letter-spacing: 0em;
   text-align: left;
-
-  -webkit-font-smoothing: antialiased;
-  -webkit-transform: translateZ(0);
-  color: var(--mainFontColor);
-  overflow: hidden;
 }
 
-body {
-  white-space: nowrap;
-  margin: 0;
-  padding: 0;
-}
 </style>

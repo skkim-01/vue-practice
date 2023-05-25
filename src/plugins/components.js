@@ -1,15 +1,26 @@
-// EasyDataTable
-import 'vue3-easy-data-table/dist/style.css';
-import Vue3EasyDataTable from 'vue3-easy-data-table';
 import PageFooter from '@/components/core/pagefooter';
 import ToolBar from '@/components/core/toolbar';
 import Navigation from '@/components/core/navigationdrawer';
 
+// EasyDataTable
+import 'vue3-easy-data-table/dist/style.css';
+import Vue3EasyDataTable from 'vue3-easy-data-table';
+
+// vuetify
+import { vuetify3 } from "@/plugins/vuetify3";
+
+// scroll lock
+import ScrollLcok from 'v-scroll-lock';
+
 function setComponents(app) {
-    app.component('EasyDataTable', Vue3EasyDataTable);
     app.component('page-footer', PageFooter);
     app.component('toolbar', ToolBar);
     app.component('navigation', Navigation);
+
+    app.component('EasyDataTable', Vue3EasyDataTable);
+
+    app.use(ScrollLcok);
+    app.use(vuetify3);
 }
 
 

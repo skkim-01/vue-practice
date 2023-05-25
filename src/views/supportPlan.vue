@@ -1,5 +1,26 @@
 <template>
-    <h1>Support Plan page</h1> 
+    <v-card>
+        <v-card-text>Support Plan page</v-card-text> 
+        <v-card-text>Support Plan page</v-card-text> 
+        <v-card-text>Support Plan page</v-card-text> 
+        <v-card-text>Support Plan page</v-card-text> 
+        <v-card-text>Support Plan page</v-card-text> 
+        <v-card-text>Support Plan page</v-card-text> 
+        <v-card-text>Support Plan page</v-card-text> 
+        <v-card-text>Support Plan page</v-card-text> 
+        <v-card-text>Support Plan page</v-card-text> 
+        <v-card-text>Support Plan page</v-card-text> 
+        <v-card-text>Support Plan page</v-card-text> 
+        <v-card-text>Support Plan page</v-card-text> 
+        <v-card-text>Support Plan page</v-card-text> 
+        <v-card-text>Support Plan page</v-card-text> 
+        <v-card-text>Support Plan page</v-card-text> 
+        <v-card-text>Support Plan page</v-card-text> 
+        <v-card-text>Support Plan page</v-card-text> 
+        <v-card-text>Support Plan page</v-card-text> 
+        <v-card-text>Support Plan page</v-card-text> 
+        <v-card-text>Support Plan page</v-card-text> 
+    </v-card>
 </template>
   
   

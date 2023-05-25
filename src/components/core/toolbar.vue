@@ -1,17 +1,14 @@
 <template>
-    <v-toolbar
-        class="v-app-bar"
-        app
-    >
+  <v-app-bar color="primary">
         <v-toolbar-title>
-            <v-app-bar-nav-icon @click="toggleNavigationBar"></v-app-bar-nav-icon>
+            vuetify console
         </v-toolbar-title>
 
         <template v-slot:append>
             <v-menu>
                 <template v-slot:activator="{ props }">
                     <v-btn v-bind="props">
-                        <v-text>UserName</v-text>
+                        username
                     </v-btn>
                 </template>
                 <v-list>
@@ -27,7 +24,7 @@
             </v-menu>
           <v-btn icon="mdi-logout" @click=onClickedLogout></v-btn>
         </template>
-    </v-toolbar>
+  </v-app-bar>
 </template>
 
 <script>
@@ -64,26 +61,3 @@ export default {
     },
 };
 </script>
-
-
-<style lang="scss">
-.v-app-bar {
-    padding: {
-      left: 32px;
-      right: 32px;
-    }
-    position: relative;
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  
-    background-color: #333333;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
-}
-
-.toolbar-menu-item {
-    padding-left: 5px;
-}
-
-</style>
