@@ -9,8 +9,6 @@ import Vue3EasyDataTable from 'vue3-easy-data-table';
 // vuetify
 import { vuetify3 } from "@/plugins/vuetify3";
 
-// scroll lock
-import ScrollLcok from 'v-scroll-lock';
 
 function setComponents(app) {
     app.component('page-footer', PageFooter);
@@ -19,7 +17,6 @@ function setComponents(app) {
 
     app.component('EasyDataTable', Vue3EasyDataTable);
 
-    app.use(ScrollLcok);
     app.use(vuetify3);
 }
 
