@@ -4,22 +4,7 @@
         v-model= "drawer"
         :rail="rail"
         permanent
-    >        
-        <!-- <v-list-item>
-            <template v-slot:append>
-                <v-btn
-                    position="relative"
-                    variant="text"
-                    icon
-                    @click.stop="rail=!rail"
-                >
-                    <v-icon>
-                        {{ rail ? "mdi-chevron-right" : "mdi-chevron-left" }}
-                    </v-icon>
-                </v-btn>
-            </template>
-        </v-list-item> -->
-
+    >
         <v-list>
             <v-list-item>
                 <v-btn
