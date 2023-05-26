@@ -1,6 +1,17 @@
 <template>
   <h1>dashboard</h1>
   <vue-echarts :option="chart_options" style="height: 500px" ref="chart" />
+  <feature-card
+    icon="mdi-chart-bar-stacked" 
+    subs="issue"
+    title="13"
+    sups="Issue Opened"
+  />
+  <v-card>
+    <v-card-text>
+
+    </v-card-text>
+  </v-card>
 </template>
 
 <script>

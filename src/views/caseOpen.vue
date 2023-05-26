@@ -1,22 +1,80 @@
 <template>
-    <h1>Case Open page</h1> 
-</template>
+    <v-container fluid grid-list-xl>
+      <v-layout wrap row>
+        <!-- -->
+        <v-flex xs12 sm4 class="pb-2" v-for="i in 3">
+          <v-card>
+            <v-toolbar color="orange" flat>
+              <v-toolbar-title>최근 게시물</v-toolbar-title>
+              <v-spacer></v-spacer>
   
+              <v-btn icon>
+                <v-icon>search</v-icon>
+              </v-btn>
+            </v-toolbar>
+            <v-list two-line>
+              <template v-for="(item, index) in items">
+                <v-subheader
+                  v-if="item.header"
+                  :key="item.header"
+                >
+                  {{ item.header }}
+                </v-subheader>
   
-<script>
-export default {
-    name: 'caseOpen',
-};
-</script>
+                <v-divider
+                  v-else-if="item.divider"
+                  :inset="item.inset"
+                  :key="index"
+                ></v-divider>
   
-<style>
-    .table {
-        border-radius: 3px;
-        background-clip: border-box;
-        border: 1px solid rgba(0, 0, 0, 0.125);
-        box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.21);
-        background-color: transparent;
+                <v-list-tile
+                  v-else
+                  :key="item.title"
+                  avatar
+                  @click=""
+                >
+                  <v-list-tile-avatar>
+                    <img :src="item.avatar">
+                  </v-list-tile-avatar>
+  
+                  <v-list-tile-content>
+                    <v-list-tile-title v-html="item.title"></v-list-tile-title>
+                    <v-list-tile-sub-title v-html="item.subtitle"></v-list-tile-sub-title>
+                  </v-list-tile-content>
+                </v-list-tile>
+              </template>
+            </v-list>
+          </v-card>
+        </v-flex>
+        </v-layout>
+        </v-container>
+  </template>
+  <script>
+  export default {
+    data () {
+      return {
+        items: [
+          { header: 'Today' },
+          {
+            avatar: 'https://cdn.vuetifyjs.com/images/lists/1.jpg',
+            title: 'Brunch this weekend?',
+            subtitle: "<span class='text--primary'>Ali Connors</span> &mdash; I'll be in your neighborhood doing errands this weekend. Do you want to hang out?"
+          },
+          { divider: true, inset: true },
+          {
+            avatar: 'https://cdn.vuetifyjs.com/images/lists/2.jpg',
+            title: 'Summer BBQ <span class="grey--text text--lighten-1">4</span>',
+            subtitle: "<span class='text--primary'>to Alex, Scott, Jennifer</span> &mdash; Wish I could come, but I'm out of town this weekend."
+          },
+          { divider: true, inset: true },
+          {
+            avatar: 'https://cdn.vuetifyjs.com/images/lists/3.jpg',
+            title: 'Oui oui',
+            subtitle: "<span class='text--primary'>Sandra Adams</span> &mdash; Do you have Paris recommendations? Have you ever been?"
+          }
+        ]
+      }
     }
-</style>
+  }
+  </script>
   
-    
