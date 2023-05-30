@@ -7,28 +7,27 @@
   <v-row class="dashbord_body" justify="space-between">
     <v-col cols="12" class="">
       <v-container class="pa-0">
-        
         <v-row>
           <v-col>
             <v-card class="bg-1dp rounded-xl issue-trend">
               <v-card-title>Trends [TODO] fix size</v-card-title>
-              <v-row>
-                <v-col cols="6">
-                  <SmallCard number="24" topic="Case Open" />
-                </v-col>
-                <v-col cols="6">
-                  <SmallCard number="13" topic="Case Resolve" />
-                </v-col>
-              </v-row>
+              <v-container>
+                <v-row justify="center">
+                  <v-col cols="6" class="d-flex justify-end">
+                    <SmallCard number="24" topic="Case Open" />
+                  </v-col>
+                  <v-col cols="6" class="d-flex justify-start">
+                    <SmallCard number="13" topic="Case Resolve" />
+                  </v-col>
+                </v-row>
+              </v-container>
             </v-card>
           </v-col>
         </v-row>
-        
+
         <v-row>
           <v-col>
-            <ChartCard
-              title="Trend Chart: TODO fix size" 
-            />
+            <ChartCard title="Trend Chart: TODO fix size" />
           </v-col>
         </v-row>
 
@@ -66,7 +65,7 @@ export default {
   // data,
   // methods,
   name: "DashBoard",
-  components: { SmallCard, },
+  components: { SmallCard },
   setup() {
     const state = reactive({
       chart_options: {

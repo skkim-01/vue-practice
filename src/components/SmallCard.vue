@@ -1,12 +1,12 @@
 <template>
   <v-card class="bg-16dp rounded-lg smallcard">
     <v-container
-      class="smallcard-container d-flex flex-column justify-space-around align-center"
+      class="smallcard-container d-flex flex-column justify-center align-center"
     >
       <v-row class="smallcard-amount" align="center">
         <v-col> {{ number }}</v-col>
       </v-row>
-      <v-row class="ma-0" align="center">
+      <v-row class="ma-0 topic" align="center">
         <v-col>{{ topic }}</v-col>
       </v-row>
     </v-container>
@@ -21,7 +21,8 @@ export default {
 
 <style lang="scss" scope>
 .v-card.smallcard {
-  width: 100%;
+  // 크기 수정하고 싶으실때 아래 width값만 (원하시는 값으로)수정하시면 됩니다.
+  width: 150px;
   position: relative;
   top: 0;
   left: 0;
@@ -36,7 +37,13 @@ export default {
     width: 100%;
     height: 100%;
     .smallcard-amount {
-      font-size: 60px;
+      // 숫자 size 설정
+      font-size: 70px;
+    }
+    .topic {
+      // 숫자 아래 topic font size를 설정
+      font-size: 14px;
+      text-align: center;
     }
     .v-col {
       padding: 0;

@@ -6,9 +6,7 @@
   </div>
 </template>
 
-<script>
-</script>
-
+<script></script>
 
 <style lang="scss">
 #app {
@@ -18,5 +16,4 @@
   letter-spacing: 0em;
   text-align: left;
 }
-
 </style>
