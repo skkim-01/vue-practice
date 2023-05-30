@@ -12,7 +12,7 @@
         <v-row>
           <v-col cols=6>
             <v-card 
-              @click="selectedIndex=0"
+              @click.stop="selectedIndex=0"
               v-bind:class="[selectedIndex == 0 ? 'selected-card' : '']"
             >
                 <v-card-title>Account And Billing</v-card-title>
@@ -22,7 +22,7 @@
 
           <v-col cols=6>
             <v-card
-              @click="selectedIndex=1"
+              @click.stop="selectedIndex=1"
               v-bind:class="[selectedIndex == 1 ? 'selected-card' : '']"
             >
               <v-card-title>Technical</v-card-title>

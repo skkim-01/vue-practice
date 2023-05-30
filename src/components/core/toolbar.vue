@@ -8,7 +8,7 @@
             <v-menu>
                 <template v-slot:activator="{ props }">
                     <v-btn v-bind="props">
-                        username
+                        <div class="text-body-2">사용자</div>
                     </v-btn>
                 </template>
                 <v-list>
@@ -18,7 +18,11 @@
                             :value="index"
                         @click=onClickedContext(index)
                     >
-                    <v-list-item-title>{{ item.title }}</v-list-item-title>
+                    <v-list-item-title>
+                        <div class="text-caption">
+                            {{ item.title }}
+                        </div>
+                    </v-list-item-title>
                     </v-list-item>
                 </v-list>
             </v-menu>
@@ -32,8 +36,7 @@ export default {
     name: 'toolbar',
     data: () => ({
       items: [
-        { title: 'Profile' },
-        { title: 'My Issues' },
+        { title: '내 관심 이슈' },
       ],
     }),
     methods: {
@@ -44,10 +47,10 @@ export default {
         },
         onClickedContext(index) {
             switch(index) {
+            // case 0:
+            //     this.$router.push('/user/profile');
+            //     break;
             case 0:
-                this.$router.push('/user/profile');
-                break;
-            case 1:
                 this.$router.push('/user/issues');
                 break;
             default:
