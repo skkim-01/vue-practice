@@ -11,7 +11,7 @@
         <v-row>
           <v-col>
             <v-card class="bg-1dp rounded-xl issue-trend">
-              <v-card-title>Issue Trends</v-card-title>
+              <v-card-title>Trends [TODO] fix size</v-card-title>
               <v-row>
                 <v-col cols="6">
                   <SmallCard number="24" topic="Case Open" />
@@ -26,7 +26,9 @@
         
         <v-row>
           <v-col>
-            <ChartCard />
+            <ChartCard
+              title="Trend Chart: TODO fix size" 
+            />
           </v-col>
         </v-row>
 

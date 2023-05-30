@@ -7,6 +7,8 @@
           </v-toolbar>
         </v-card>
 
+      <v-row class="ma-2" />
+
       <v-form>
         <v-text-field
           name="login"
