@@ -1,5 +1,9 @@
 <template>
   <v-row class="title"><h2>SUPPORT CASE</h2></v-row>
+  <v-row class="title"><h5>List of support case.</h5></v-row>
+  <v-container class="pa-1" />
+  <v-divider />
+  <v-container class="pa-1" />
   <v-row class="support-case-body" justify="space-between">
     <V-col cols="12">
       <!-- Space -->
@@ -7,9 +11,10 @@
 
       <!-- Search Field -->
       <v-container class="pa-1">
-        <v-row>
-          <v-text>검색</v-text>
-          <v-text-field>검색창</v-text-field>
+        <v-row align="center">
+          <v-spacer />
+          <v-text-field></v-text-field>
+          <v-spacer />
         </v-row>
       </v-container>
     

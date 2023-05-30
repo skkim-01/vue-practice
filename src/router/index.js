@@ -7,6 +7,7 @@ import Dashboard from '@/views/dashboard';
 import supportCase from '@/views/supportCase';
 import supportPlan from '@/views/supportPlan';
 import caseOpen from '@/views/caseOpen';
+import caseOpenDetail from '@/views/caseOpenDetail';
 
 import userProfile from '@/views/userProfile';
 import userIssues from '@/views/userIssues';
@@ -51,6 +52,14 @@ const routes = [
     path: '/case/open',
     name: 'caseOpen',
     component: caseOpen,
+    meta: {
+      layout: 'dashboardLayout'
+    }
+  },
+  {
+    path: '/case/open/detail',
+    name: 'caseOpenDetail',
+    component: caseOpenDetail,
     meta: {
       layout: 'dashboardLayout'
     }

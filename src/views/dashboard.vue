@@ -1,5 +1,9 @@
 <template>
   <v-row class="title"><h2>DASHBOARD</h2></v-row>
+  <v-row class="title"><h5>Management console dashboard page.</h5></v-row>
+  <v-container class="pa-1" />
+  <v-divider />
+  <v-container class="ma-1" />
   <v-row class="dashbord_body" justify="space-between">
     <v-col cols="12" class="">
       <v-container class="pa-0">
