@@ -1,5 +1,5 @@
 <template>
-  <v-row class="title"><h1>dashboard</h1></v-row>
+  <v-row class="title"><h2>DASHBOARD</h2></v-row>
   <v-row class="dashbord_body" justify="space-between">
     <v-col cols="8" class="">
       <v-container class="pa-0">
@@ -15,6 +15,7 @@
               title="My Cases"
               :headers="state.headers"
               :items="state.desserts"
+              :tableHeight="6"
             />
           </v-col>
         </v-row>
@@ -24,6 +25,7 @@
               title="Recent Cases"
               :headers="state.recentCaseHeader"
               :items="state.recentCaseItems"
+              :tableHeight="6"
             />
           </v-col>
         </v-row>
@@ -33,6 +35,7 @@
               title="Recent Comment"
               :headers="state.headers"
               :items="state.desserts"
+              :tableHeight="6"
             />
           </v-col>
         </v-row>

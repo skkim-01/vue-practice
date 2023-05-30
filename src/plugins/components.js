@@ -2,6 +2,7 @@ import PageFooter from '@/components/core/pagefooter';
 import ToolBar from '@/components/core/toolbar';
 import Navigation from '@/components/core/navigationdrawer';
 import FeatureCard from '@/components/feature-card';
+import TableCard from "@/components/TableCard";
 
 // EasyDataTable
 import 'vue3-easy-data-table/dist/style.css';
@@ -12,12 +13,13 @@ import { vuetify3 } from "@/plugins/vuetify3";
 
 
 function setComponents(app) {
+    app.component('EasyDataTable', Vue3EasyDataTable);
+
     app.component('page-footer', PageFooter);
     app.component('toolbar', ToolBar);
     app.component('navigation', Navigation);
     app.component('feature-card', FeatureCard);
-
-    app.component('EasyDataTable', Vue3EasyDataTable);
+    app.component('TableCard', TableCard);
 
     app.use(vuetify3);
 }

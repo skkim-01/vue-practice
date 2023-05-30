@@ -1,34 +1,41 @@
 <template>
-    <EasyDataTable
-      :headers="headers"
-      :items="items"
-      :theme-color="primary"
-      :items-selected="itemsSelected"
-      buttons-pagination
-    />
-  </template>
-  
-<script setup>
-const props = defineProps({
-    resource: Object,
-})
+  <v-row class="title"><h2>SUPPORT CASE</h2></v-row>
+  <v-row class="support-case-body" justify="space-between">
+    <V-col cols="12">
+      <!-- Space -->
+      <v-container class="ma-1" />
 
-  const headers = [
-    { text: "PLAYER", value: "player" },
-    { text: "TEAM", value: "team"},
-    { text: "NUMBER", value: "number"},
-    { text: "POSITION", value: "position"},
-    { text: "HEIGHT", value: "indicator.height"},
-    { text: "WEIGHT (lbs)", value: "indicator.weight", sortable: true},
-    { text: "LAST ATTENDED", value: "lastAttended", width: 200},
-    { text: "COUNTRY", value: "country"},
-  ];
-  
-  const items = [
-    { player: "Stephen Curry", team: "GSW", number: 30, position: 'G', indicator: {"height": '6-2', "weight": 185}, lastAttended: "Davidson", country: "USA"},
-    { player: "Lebron James", team: "LAL", number: 6, position: 'F', indicator: {"height": '6-9', "weight": 250}, lastAttended: "St. Vincent-St. Mary HS (OH)", country: "USA"},
-    { player: "Kevin Durant", team: "BKN", number: 7, position: 'F', indicator: {"height": '6-10', "weight": 240}, lastAttended: "Texas-Austin", country: "USA"},
-    { player: "Giannis Antetokounmpo", team: "MIL", number: 34, position: 'F', indicator: {"height": '6-11', "weight": 242}, lastAttended: "Filathlitikos", country: "Greece"},
-  ];
+      <!-- Search Field -->
+      <v-container class="pa-1">
+        <v-row>
+          <v-text>검색</v-text>
+          <v-text-field>검색창</v-text-field>
+        </v-row>
+      </v-container>
+    
+      <!-- divider -->
+      <v-divider />
 
+      <!-- Space -->
+      <v-container class="ma-2" />
+    
+      <!-- Table -->
+      <TableCard />
+
+    </V-col>
+  </v-row>
+</template>
+  
+  
+<script>
+export default {
+    name: 'supportPlan',
+};
 </script>
+
+
+<style lang="scss" scoped>
+.title {
+  margin: 0;
+}
+</style>
