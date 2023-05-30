@@ -3,6 +3,7 @@ import ToolBar from '@/components/core/toolbar';
 import Navigation from '@/components/core/navigationdrawer';
 import FeatureCard from '@/components/feature-card';
 import TableCard from "@/components/TableCard";
+import ChartCard from "@/components/ChartCard";
 
 // EasyDataTable
 import 'vue3-easy-data-table/dist/style.css';
@@ -20,6 +21,7 @@ function setComponents(app) {
     app.component('navigation', Navigation);
     app.component('feature-card', FeatureCard);
     app.component('TableCard', TableCard);
+    app.component('ChartCard', ChartCard);
 
     app.use(vuetify3);
 }

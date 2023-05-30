@@ -1,16 +1,33 @@
 <template>
   <v-row class="title"><h2>DASHBOARD</h2></v-row>
   <v-row class="dashbord_body" justify="space-between">
-    <v-col cols="8" class="">
+    <v-col cols="12" class="">
       <v-container class="pa-0">
+        
         <v-row>
           <v-col>
-            <!-- <feature-card
-              icon="mdi-chart-bar-stacked"
-              subs="issue"
-              title="13"
-              sups="Issue Opened"
-            /> -->
+            <v-card class="bg-1dp rounded-xl issue-trend">
+              <v-card-title>Issue Trends</v-card-title>
+              <v-row>
+                <v-col cols="6">
+                  <SmallCard number="24" topic="Case Open" />
+                </v-col>
+                <v-col cols="6">
+                  <SmallCard number="13" topic="Case Resolve" />
+                </v-col>
+              </v-row>
+            </v-card>
+          </v-col>
+        </v-row>
+        
+        <v-row>
+          <v-col>
+            <ChartCard />
+          </v-col>
+        </v-row>
+
+        <v-row>
+          <v-col>
             <TableCard
               title="My Cases"
               :headers="state.headers"
@@ -19,6 +36,7 @@
             />
           </v-col>
         </v-row>
+
         <v-row>
           <v-col>
             <TableCard
@@ -29,55 +47,20 @@
             />
           </v-col>
         </v-row>
-        <v-row>
-          <v-col>
-            <TableCard
-              title="Recent Comment"
-              :headers="state.headers"
-              :items="state.desserts"
-              :tableHeight="6"
-            />
-          </v-col>
-        </v-row>
       </v-container>
-    </v-col>
-    <v-col cols="4" class="">
-      <v-card class="bg-1dp rounded-xl issue-trend">
-        <v-card-title>Issue Trends</v-card-title>
-        <v-container fluid>
-          <v-row>
-            <v-col cols="6">
-              <SmallCard number="24" topic="Case Open" />
-            </v-col>
-            <v-col cols="6">
-              <SmallCard number="13" topic="Case Resolve" />
-            </v-col>
-          </v-row>
-          <v-row>
-            <v-col>
-              <vue-echarts
-                :option="state.chart_options"
-                style="height: 500px"
-                ref="chart"
-              />
-            </v-col>
-          </v-row>
-        </v-container>
-      </v-card>
     </v-col>
   </v-row>
 </template>
 
 <script>
 import { reactive } from "vue";
-import { VueEcharts } from "vue3-echarts";
 import SmallCard from "../components/SmallCard";
-import TableCard from "../components/TableCard";
+
 export default {
   // data,
   // methods,
   name: "DashBoard",
-  components: { SmallCard, TableCard, VueEcharts },
+  components: { SmallCard, },
   setup() {
     const state = reactive({
       chart_options: {
