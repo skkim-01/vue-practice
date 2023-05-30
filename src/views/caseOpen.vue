@@ -73,6 +73,8 @@
   <v-row justify="center">
     <v-btn class="ma-1" @click="onClickedNext"> 다음 </v-btn>
   </v-row>
+
+  <v-container class="ma-1" />
 </template>
 
 <script setup>

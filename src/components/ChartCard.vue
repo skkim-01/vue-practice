@@ -1,6 +1,5 @@
 <template>
   <v-card class="elevation-1 rounded-xl pa-3">
-    <v-card-title>Trends</v-card-title>
     <vue-echarts
       :option="chart_options"
       style="height: 300px"
