@@ -2,7 +2,7 @@
   <v-card class="elevation-1 rounded-xl pa-3">
     <vue-echarts
       :option="chart_options"
-      style="height: 300px"
+      style="height: 400px"
       ref="chart"
     />  
   </v-card>
