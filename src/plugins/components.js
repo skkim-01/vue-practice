@@ -1,7 +1,6 @@
 import PageFooter from '@/components/core/pagefooter';
 import ToolBar from '@/components/core/toolbar';
 import Navigation from '@/components/core/navigationdrawer';
-import FeatureCard from '@/components/feature-card';
 import TableCard from "@/components/TableCard";
 import ChartCard from "@/components/ChartCard";
 
@@ -19,7 +18,6 @@ function setComponents(app) {
     app.component('page-footer', PageFooter);
     app.component('toolbar', ToolBar);
     app.component('navigation', Navigation);
-    app.component('feature-card', FeatureCard);
     app.component('TableCard', TableCard);
     app.component('ChartCard', ChartCard);
 
