@@ -10,7 +10,7 @@
         <v-row>
           <v-col>
             <v-card class="bg-1dp rounded-xl issue-trend">
-              <v-card-title>Trends [TODO] fix size</v-card-title>
+              <v-card-title>Trends</v-card-title>
               <v-container>
                 <v-row justify="center">
                   <v-col cols="6" class="d-flex justify-end">
@@ -27,7 +27,7 @@
 
         <v-row>
           <v-col>
-            <ChartCard title="Trend Chart: TODO fix size" />
+            <ChartCard title="Trend Chart" />
           </v-col>
         </v-row>
 

@@ -67,7 +67,7 @@
 import { reactive } from "vue";
 import FormItem from "../components/FormItem.vue";
 export default {
-  name: "supportPlan",
+  name: "supportCase",
   components: { FormItem },
   setup() {
     const state = reactive({
