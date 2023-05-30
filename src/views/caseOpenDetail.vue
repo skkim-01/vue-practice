@@ -6,8 +6,38 @@
   <v-container class="ma-1" />
 
   <!-- Main Contents -->
-  <v-card style="height:500px">
-    <v-card-title>[TODO: Remove] Case Open Detail Contents</v-card-title>
+  <v-card>
+    <v-container class="ma-1">
+      <v-col cols="12">
+        <v-card>
+          <v-card-text>Subject</v-card-text>
+          <v-card-subtitle>Briefly summarize your question or issue. 250 characters.</v-card-subtitle>
+          <v-card-text>
+            <v-text-field></v-text-field>
+          </v-card-text>
+        </v-card>
+      </v-col>
+      
+      <v-col cols="12">
+        <v-card>
+          <v-card-text>Description</v-card-text>
+          <v-card-subtitle>Describe your question or issue in detail. 8000 characters.</v-card-subtitle>
+          <v-card-text>
+            <v-text-field></v-text-field>
+          </v-card-text>
+        </v-card>
+      </v-col>
+
+      <v-col cols="12">
+        <v-card>
+          <v-card-text>Attach files</v-card-text>
+          <v-card-subtitle>You can attach up to 3 files. Each file can be up to 5 MB.</v-card-subtitle>
+          <v-card-text>
+            <v-text-field></v-text-field>
+          </v-card-text>
+        </v-card>
+      </v-col>
+    </v-container>
   </v-card>
 
   <v-container class="ma-1" />

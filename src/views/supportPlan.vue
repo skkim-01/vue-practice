@@ -5,7 +5,7 @@
   <v-divider />
   <v-container class="pa-1" />
   <v-row class="support-plan-body" justify="space-between">
-    <V-col cols="12">
+    <v-col cols="12">
       <!-- Space -->
       <v-container class="ma-1" />
 
@@ -27,7 +27,7 @@
       <!-- Table -->
       <TableCard />
 
-    </V-col>
+    </v-col>
   </v-row>
 </template>
   
