@@ -22,7 +22,7 @@ export const vuetify3 = createVuetify({
           accent: "#22f1bf",
           error: "#CF6679",
           textPrimary: "#FFF",
-          textSecondary: "",
+          textSecondary: "#FFF",
           dark: "#121212",
           border: "#434343",
           "24dp": "#383838",
