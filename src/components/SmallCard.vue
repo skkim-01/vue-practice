@@ -36,6 +36,7 @@ export default {
     position: absolute;
     width: 100%;
     height: 100%;
+    text-align: center;
     .smallcard-amount {
       // 숫자 size 설정
       font-size: 70px;
@@ -43,7 +44,6 @@ export default {
     .topic {
       // 숫자 아래 topic font size를 설정
       font-size: 14px;
-      text-align: center;
     }
     .v-col {
       padding: 0;
