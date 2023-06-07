@@ -34,14 +34,6 @@ export default class AxiosHelper {
     static async send(method, url, hdrs, body) {
         let eMsg = ""
         let data = ""
-
-        hdrs = {
-            ...hdrs,
-            // Default CORS: TRUE
-            'Access-Control-Allow-Origin': '*',
-            'Access-Control-Allow-Methods': 'GET, POST, PATCH, PUT, DELETE, OPTIONS',
-            'Access-Control-Allow-Headers': 'Origin, Content-Type, X-Auth-Token'
-        }
         
         await axios({
             method: method, // in
