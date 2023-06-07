@@ -5,7 +5,6 @@ import (
 	"net/http"
 	"time"
 
-	JsonMapper "github.com/skkim-01/json-mapper/src"
 	"github.com/skkim-01/vue-practice/dummyserver/results"
 )
 
@@ -17,25 +16,34 @@ func CaseList(w http.ResponseWriter, r *http.Request) {
 	SetCors(&w)
 	w.Header().Add("content-type", "application/json")
 
-	jsonResponse, _ := JsonMapper.NewBytes([]byte("{}"))
-	jsonResponse.Insert("", "account_id", "account 1")
-	jsonResponse.Insert("", "category_code", "account 1")
-	jsonResponse.Insert("", "display_id", "account 1")
-	jsonResponse.Insert("", "language", "account 1")
-	jsonResponse.Insert("", "service_code", "account 1")
-	jsonResponse.Insert("", "status", "account 1")
-	jsonResponse.Insert("", "subject", "account 1")
-	jsonResponse.Insert("", "severity_code", "account 1")
-	jsonResponse.Insert("", "onwer_email", "account 1")
-	jsonResponse.Insert("", "use_yn", "account 1")
-	jsonResponse.Insert("", "case_create_time", "account 1")
-	jsonResponse.Insert("", "create_time", "account 1")
-	jsonResponse.Insert("", "update_time", "account 1")
+	slResult := make([]map[string]interface{}, 3)
+	slResult[0] = _createDummyData()
+	slResult[1] = _createDummyData()
+	slResult[2] = _createDummyData()
 
-	result.Success("items", jsonResponse.Find(""))
+	result.Success("items", slResult)
 
 	fmt.Fprintf(w, "%v", result.Build())
 
 	tmElapsed = time.Since(tmStart)
 	fmt.Println("#DBG\t[GET] /v1/support-case\tresult:", result.Build(), "\ttook:", tmElapsed)
+}
+
+func _createDummyData() map[string]interface{} {
+	dummy := make(map[string]interface{}, 0)
+	dummy["account_id"] = "account 1"
+	dummy["category_code"] = "cat_10103"
+	dummy["display_id"] = "disp_1013"
+	dummy["language"] = "en"
+	dummy["service_code"] = "svc_1013"
+	dummy["status"] = "OPENED"
+	dummy["subject"] = "test subject"
+	dummy["severity_code"] = "CRITICAL"
+	dummy["onwer_email"] = "test@account.com"
+	dummy["use_yn"] = "y"
+	dummy["case_create_time"] = "2023-06-07 12:01:02"
+	dummy["create_time"] = "2023-06-07 12:01:02"
+	dummy["update_time"] = "2023-06-07 12:01:02"
+
+	return dummy
 }
