@@ -24,7 +24,7 @@ func CaseList(w http.ResponseWriter, r *http.Request) {
 	// slResult[2] = _createDummyData()
 
 	slResult := _createDummys(45)
-	result.Success("items", slResult)
+	result.Success("total", 45, "items", slResult)
 
 	fmt.Fprintf(w, "%v", result.Build())
 
@@ -38,6 +38,7 @@ func _createDummys(count int) []map[string]interface{} {
 
 	for i := 0; i < count; i++ {
 		dummy := make(map[string]interface{}, 0)
+		dummy["case_id"] = fmt.Sprintf("caseid_%03d", i)
 		dummy["account_id"] = fmt.Sprintf("account %v", (i+1)%5)
 		dummy["category_code"] = fmt.Sprintf("category %v", (i+1)%7)
 		dummy["display_id"] = fmt.Sprintf("display id %v", (i+1)%5)
