@@ -18,5 +18,6 @@ spec:
       containers:
       - name: testflight
         image: skkim01/testflights:v1.0
+        imagePullPolicy: Always
         ports:
         - containerPort: 8080
