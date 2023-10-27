@@ -1,0 +1,22 @@
+apiVersion: apps/v1 
+kind: Deployment
+metadata:
+  name: testflight-deployment
+  namespace: skkim-01
+  labels:
+    app: testflight
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: testflight
+  template:
+    metadata:
+      labels:
+        app: testflight
+    spec:
+      containers:
+      - name: testflight
+        image: skkim01/testflights:v1.0
+        ports:
+        - containerPort: 8080
